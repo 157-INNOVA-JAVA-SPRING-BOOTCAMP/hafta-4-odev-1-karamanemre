@@ -22,17 +22,17 @@ import javax.validation.constraints.Size;
 public class RegisterDto {
 
 
-    @NotEmpty(message = "email alanını boş geçemezsiniz")
+    @NotEmpty(message = "email alanını bos geçemezsiniz")
     @Email(message = "lütfen geçerli bir email giriniz")
     private String email;
 
-    @NotEmpty(message = "name alanını boş geçemezsiniz")
+    @NotEmpty(message = "name alanını bos geçemezsiniz")
     private String name;
 
-    @NotEmpty(message = "surname alanını boş geçemezsiniz")
+    @NotEmpty(message = "surname alanını bos geçemezsiniz")
     private String surname;
 
-    @NotEmpty(message = "password alanını boş geçemezsiniz")
+    @NotEmpty(message = "password alanını bos geçemezsiniz")
     @Size(min = 6,max = 16)
     private String password;
 }

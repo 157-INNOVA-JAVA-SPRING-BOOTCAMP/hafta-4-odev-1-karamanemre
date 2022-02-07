@@ -10,4 +10,5 @@ public class SpringMvcJpaApplication {
         SpringApplication.run(SpringMvcJpaApplication.class, args);
     }
 
+
 }

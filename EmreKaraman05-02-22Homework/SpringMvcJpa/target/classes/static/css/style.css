@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+}
+
+.form-container{
+    margin-top: 5rem;
+    width: 30rem;
+    height: 100%;
+}
+
+.error {
+    border-color: red;
+    border-radius: 0.5rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Supermercado One', cursive;
+}
+
+input{
+    border-radius: 0.5rem;
+}
+
+.errortext {
+    color: red;
+    font-size: 0.6rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Supermercado One', cursive;
+}
+
+.title{
+    font-size: 2rem;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    color: #1A73E8;
+    margin-left: -5rem;
+}
+
+.field-name{
+
+    font-family: 'Mukta', sans-serif !important;
+    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Supermercado One', cursive !important;
+}
+
+.form-validation-body{
+    background-image: url("https://raw.githubusercontent.com/karamanemre/hrms-frontend/master/public/headerbackground2.png");
+}
