@@ -1,0 +1,74 @@
+<!doctype html>
+<html  th:lang="${#locale.language}"  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>Thymeleaf -2 </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"   th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Mukta&family=Oswald&family=Supermercado+One&display=swap" rel="stylesheet">
+    <script th:src="@{/js/template2.js}"></script>
+</head>
+<body class="form-validation-body">
+<!--start codes-->
+<!--th:action:getMapping
+th:object:model key-->
+
+
+<div class="form-container container">
+    <p th:text="#{form}" class="text-center text-uppercase title"></p>
+<form th:method="post" th:action="@{/formurl}" th:object="${key_form}">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">Name</div>
+            <div class="col-md-10 form-group" >
+                <input th:field="*{name}"  type="text"
+                       class="form-control field-name " autofocus
+                       th:class="${#fields.hasErrors('name')}? error"
+                >
+                <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:class="${#fields.hasErrors('name')}? errortext"></div>
+            </div>
+
+            <div  class="col-md-2">Surname</div>
+            <div class="col-md-10 form-group" >
+                <input th:field="*{surname}" th:class="${#fields.hasErrors('surname')}? error"  type="text"  class="form-control field-name" >
+                <div th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}" th:class="${#fields.hasErrors('name')}? errortext" ></div>
+            </div>
+
+            <div  class="col-md-2">Email</div>
+            <div class="col-md-10 form-group" >
+                <input th:field="*{email}"  th:class="${#fields.hasErrors('email')}? error" type="text"  class="form-control field-name"     >
+                <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" th:class="${#fields.hasErrors('name')}? errortext"></div>
+            </div>
+
+            <div  class="col-md-2">Password</div>
+            <div class="col-md-10 form-group" >
+                <input th:field="*{password}" th:class="${#fields.hasErrors('password')}? error" type="text"  class="form-control field-name"     >
+                <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" th:class="${#fields.hasErrors('name')}? errortext" ></div>
+            </div>
+
+
+
+            <div  class="col-md-2"></div>
+            <div class="col-md-10 form-group">
+                <input type="reset" class="btn btn-danger" value="Temizle" >
+                <input type="submit" class="btn btn-primary" value="Gönder" >
+            </div>
+
+        </div>
+    </div>
+</form>
+</div>
+
+
+<!--end codes-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
